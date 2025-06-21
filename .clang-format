@@ -1,5 +1,5 @@
 ---
-Language: C
+Language: Cpp
 # 基于 LLVM 风格，然后进行自定义
 BasedOnStyle: LLVM
 
