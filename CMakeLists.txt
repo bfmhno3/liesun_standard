@@ -48,11 +48,20 @@ target_link_directories(${CMAKE_PROJECT_NAME} PRIVATE
 # Add sources to executable
 target_sources(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user sources here
+
+    # SEGGER RTT 的源文件
+    ${CMAKE_SOURCE_DIR}/Drivers/SEGGER_RTT/Src/SEGGER_RTT.c
+    ${CMAKE_SOURCE_DIR}/Drivers/SEGGER_RTT/Src/SEGGER_RTT_printf.c
+    ${CMAKE_SOURCE_DIR}/Drivers/SEGGER_RTT/Src/SEGGER_RTT_ASM_ARMv7M.s
 )
 
 # Add include paths
 target_include_directories(${CMAKE_PROJECT_NAME} PRIVATE
     # Add user defined include paths
+
+    # SEGGER RTT 的配置目录和头文件目录
+    ${CMAKE_SOURCE_DIR}/Drivers/SEGGER_RTT/Config
+    ${CMAKE_SOURCE_DIR}/Drivers/SEGGER_RTT/Inc
 )
 
 # Add project symbols (macros)
